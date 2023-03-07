@@ -2,5 +2,7 @@
   "block.tutorialmod.acm_block": "Block of ACM",
   "block.tutorialmod.acm_ore": "ACMium Ore",
 
+  "item.tutorialmod.acmium": "ACMium",
+
   "itemGroup.tutorialtab": "ACMium Tutorial Tab"
 }
