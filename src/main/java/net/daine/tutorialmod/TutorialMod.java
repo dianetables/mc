@@ -2,6 +2,8 @@ package net.daine.tutorialmod;
 
 import com.mojang.logging.LogUtils;
 import net.daine.tutorialmod.block.ModBlocks;
+import net.daine.tutorialmod.generation.ModConfiguredFeatures;
+import net.daine.tutorialmod.generation.ModPlacedFeatures;
 import net.daine.tutorialmod.item.ModItems;
 import net.minecraft.client.Minecraft;
 import net.minecraft.world.level.block.Blocks;
@@ -37,11 +39,11 @@ public class TutorialMod
     public TutorialMod()
     {
         IEventBus modEventBus = FMLJavaModLoadingContext.get().getModEventBus();
-        //ModItems.register(modEventBus);
+        ModItems.register(modEventBus);
         ModBlocks.register(modEventBus);
 
-        //ModConfiguredFeatures.register(modEventBus);
-        //ModPlacedFeatures.register(modEventBus);
+        ModConfiguredFeatures.register(modEventBus);
+        ModPlacedFeatures.register(modEventBus);
 
         modEventBus.addListener(this::commonSetup);
 

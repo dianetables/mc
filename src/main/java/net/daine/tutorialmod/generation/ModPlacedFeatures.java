@@ -16,7 +16,7 @@ public class ModPlacedFeatures {
 
     public static final RegistryObject<PlacedFeature> ACM_ORE_PLACED = PLACED_FEATURES.register("acm_ore_placed",
             () -> new PlacedFeature(ModConfiguredFeatures.ZIRCON_ORE.getHolder().get(),
-                    commonOrePlacement(7, // VeinsPerChunk
+                    commonOrePlacement(700, // VeinsPerChunk
                             HeightRangePlacement.triangle(VerticalAnchor.aboveBottom(-80), VerticalAnchor.aboveBottom(80)))));
 
     public static final RegistryObject<PlacedFeature> END_ZIRCON_ORE_PLACED = PLACED_FEATURES.register("end_zircon_ore_placed",

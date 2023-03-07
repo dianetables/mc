@@ -23,4 +23,8 @@ public class ModItems {
             ITEMS.register("acm_block", () -> new Item(new
                     Item.Properties().tab(ModCreativeModTab.TUTORIAL_TAB)));
 */
+    //added a new function edit later i guess
+    public static void register(IEventBus eventBus) {
+        ITEMS.register(eventBus);
+    }
 }
