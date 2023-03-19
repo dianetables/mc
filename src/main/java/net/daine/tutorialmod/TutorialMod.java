@@ -55,6 +55,7 @@ public class TutorialMod
         // Some common setup code
         LOGGER.info("HELLO FROM COMMON SETUP");
         //LOGGER.info("DIRT BLOCK >> {}", ForgeRegistries.BLOCKS.getKey(Blocks.DIRT));
+        //event.enqueueWork(() -> {}); //idk what it does but steven has it
     }
 
    /* // You can use SubscribeEvent and let the Event Bus discover methods to call
