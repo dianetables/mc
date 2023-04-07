@@ -2,10 +2,13 @@ package net.daine.tutorialmod;
 
 import com.mojang.logging.LogUtils;
 import net.daine.tutorialmod.block.ModBlocks;
+import net.daine.tutorialmod.entity.ModEntityTypes;
+import net.daine.tutorialmod.entity.client.ChomperRenderer;
 import net.daine.tutorialmod.generation.ModConfiguredFeatures;
 import net.daine.tutorialmod.generation.ModPlacedFeatures;
 import net.daine.tutorialmod.item.ModItems;
 import net.minecraft.client.Minecraft;
+import net.minecraft.client.renderer.entity.EntityRenderers;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.eventbus.api.IEventBus;
@@ -17,6 +20,9 @@ import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 import net.minecraftforge.registries.ForgeRegistries;
 import org.slf4j.Logger;
+import software.bernie.geckolib3.GeckoLib;
+
+//spawn stuff "/summon [name]"
 
 // The value here should match an entry in the META-INF/mods.toml file
 @Mod(TutorialMod.MODID)
@@ -39,15 +45,27 @@ public class TutorialMod
     public TutorialMod()
     {
         IEventBus modEventBus = FMLJavaModLoadingContext.get().getModEventBus();
+
+        //register stuff
         ModItems.register(modEventBus);
         ModBlocks.register(modEventBus);
 
         ModConfiguredFeatures.register(modEventBus);
         ModPlacedFeatures.register(modEventBus);
 
+        // register entities thing
+        ModEntityTypes.register(modEventBus);
+
         modEventBus.addListener(this::commonSetup);
 
         MinecraftForge.EVENT_BUS.register(this);
+
+        // call GeckoLib thing
+        GeckoLib.initialize();
+
+
+
+
     }
 
     private void commonSetup(final FMLCommonSetupEvent event)
@@ -65,7 +83,7 @@ public class TutorialMod
         // Do something when the server starts
         LOGGER.info("HELLO from server starting");
     }
-
+*/
     // You can use EventBusSubscriber to automatically register all static methods in the class annotated with @SubscribeEvent
     @Mod.EventBusSubscriber(modid = MODID, bus = Mod.EventBusSubscriber.Bus.MOD)
     public static class ClientModEvents
@@ -74,8 +92,10 @@ public class TutorialMod
         public static void onClientSetup(FMLClientSetupEvent event)
         {
             // Some client setup code
-            LOGGER.info("HELLO FROM CLIENT SETUP");
-            LOGGER.info("MINECRAFT NAME >> {}", Minecraft.getInstance().getUser().getName());
+            //LOGGER.info("HELLO FROM CLIENT SETUP");
+            //LOGGER.info("MINECRAFT NAME >> {}", Minecraft.getInstance().getUser().getName());
+            //register renderer
+            EntityRenderers.register(ModEntityTypes.CHOMPER.get(), ChomperRenderer::new);
         }
-    }*/
+    }
 }

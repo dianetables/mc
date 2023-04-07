@@ -1,8 +1,10 @@
 package net.daine.tutorialmod.item;
 
 import net.daine.tutorialmod.TutorialMod;
+import net.daine.tutorialmod.entity.ModEntityTypes;
 import net.minecraft.world.entity.EquipmentSlot;
 import net.minecraft.world.item.*;
+import net.minecraftforge.common.ForgeSpawnEggItem;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
@@ -51,6 +53,11 @@ public class ModItems {
             () -> new ArmorItem(ArmorMaterials.DIAMOND,EquipmentSlot.LEGS,new Item.Properties().tab(ModCreativeModTab.TUTORIAL_TAB)));
     public static final RegistryObject<Item> EXAMPLE_BOOTS = ITEMS.register("example_boots",
             () -> new ArmorItem(ArmorMaterials.DIAMOND,EquipmentSlot.FEET,new Item.Properties().tab(ModCreativeModTab.TUTORIAL_TAB)));
+
+    //entity below
+    public static final RegistryObject<Item> CHOMPER_SPAWN_EGG = ITEMS.register("chomper_spawn_egg",
+            () -> new ForgeSpawnEggItem(ModEntityTypes.CHOMPER, 0x00c5ff, 0x9600ff, //https://color-hex.org/
+                    new Item.Properties().tab(ModCreativeModTab.TUTORIAL_TAB)));
 
     //added a new function edit later i guess
     public static void register(IEventBus eventBus) {
