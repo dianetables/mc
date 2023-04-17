@@ -6,6 +6,8 @@
 
   "item.tutorialmod.chomper_spawn_egg": "Chomper Spawn Egg",
 
-  "itemGroup.tutorialtab": "ACMium Tutorial Tab"
+  "itemGroup.tutorialtab": "ACMium Tutorial Tab",
+
+  "item.tutorialmod.bl_ping_bong": "Bl_ping_bong"
 
 }

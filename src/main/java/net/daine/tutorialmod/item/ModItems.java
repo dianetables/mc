@@ -59,6 +59,12 @@ public class ModItems {
             () -> new ForgeSpawnEggItem(ModEntityTypes.CHOMPER, 0x00c5ff, 0x9600ff, //https://color-hex.org/
                     new Item.Properties().tab(ModCreativeModTab.TUTORIAL_TAB)));
 
+
+    //epic stuff
+    public static final RegistryObject<Item> BL_PING_BONG = ITEMS.register("bl_ping_bong",
+            () -> new SwordItem(Tiers.DIAMOND, 7, 4f,
+                    new Item.Properties().tab(ModCreativeModTab.TUTORIAL_TAB).stacksTo(1)));
+
     //added a new function edit later i guess
     public static void register(IEventBus eventBus) {
         ITEMS.register(eventBus);
