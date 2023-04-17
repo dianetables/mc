@@ -64,6 +64,9 @@ public class ModItems {
     public static final RegistryObject<Item> BL_PING_BONG = ITEMS.register("bl_ping_bong",
             () -> new SwordItem(Tiers.DIAMOND, 7, 4f,
                     new Item.Properties().tab(ModCreativeModTab.TUTORIAL_TAB).stacksTo(1)));
+    public static final RegistryObject<Item> CAPS_SHIELD = ITEMS.register("caps_shield", () -> new ShieldItem(
+            new Item.Properties().tab(ModCreativeModTab.TUTORIAL_TAB).stacksTo(1)));
+
 
     //added a new function edit later i guess
     public static void register(IEventBus eventBus) {
