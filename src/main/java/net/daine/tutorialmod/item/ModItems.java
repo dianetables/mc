@@ -2,6 +2,7 @@ package net.daine.tutorialmod.item;
 
 import net.daine.tutorialmod.TutorialMod;
 import net.daine.tutorialmod.entity.ModEntityTypes;
+import net.minecraft.client.resources.metadata.animation.VillagerMetaDataSection;
 import net.minecraft.world.entity.EquipmentSlot;
 import net.minecraft.world.item.*;
 import net.minecraftforge.common.ForgeSpawnEggItem;
@@ -67,7 +68,16 @@ public class ModItems {
     public static final RegistryObject<Item> CAPS_SHIELD = ITEMS.register("caps_shield", () -> new ShieldItem(
             new Item.Properties().tab(ModCreativeModTab.TUTORIAL_TAB).stacksTo(1)));
 
+/*    public static final RegistryObject<ArmorItem> HAT = ITEMS.register("hat",
+            () -> new ArmorItem(ArmorMaterials.TURTLE, EquipmentSlot.HEAD,new Item.Properties().tab(ModCreativeModTab.TUTORIAL_TAB)));*/
 
+    /*public static final RegistryObject<ArmorItem> HAT = ITEMS.register("hat",
+            () -> new ArmorItem(, EquipmentSlot.HEAD,new Item.Properties().tab(ModCreativeModTab.TUTORIAL_TAB)));*/
+
+
+
+    public static final RegistryObject<Item> TEST2 = ITEMS.register("test2",
+            () -> new Item(new Item.Properties().tab(ModCreativeModTab.TUTORIAL_TAB)));
     //added a new function edit later i guess
     public static void register(IEventBus eventBus) {
         ITEMS.register(eventBus);

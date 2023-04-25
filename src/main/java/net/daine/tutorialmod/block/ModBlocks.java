@@ -33,7 +33,12 @@ public class ModBlocks {
             () -> new DropExperienceBlock(BlockBehaviour.Properties.of(Material.STONE)
                     .strength(0f).requiresCorrectToolForDrops(),
                     UniformInt.of(3, 7)), ModCreativeModTab.TUTORIAL_TAB);
-/*
+    public static final RegistryObject<Block> TEST = registerBlock("test",
+            () -> new Block(BlockBehaviour.Properties.of(Material.STONE).strength(0f)),ModCreativeModTab.TUTORIAL_TAB);
+
+    public static final RegistryObject<Block> HAT = registerBlock("hat",
+            () -> new Block(BlockBehaviour.Properties.of(Material.STONE).strength(0f)),ModCreativeModTab.TUTORIAL_TAB);
+    /*
     public static final RegistryObject<Block> DEEPSLATE_ACM_ORE = registerBlock("deepslate_acm_ore",
             () -> new DropExperienceBlock(BlockBehaviour.Properties.of(Material.STONE)
                     .strength(0f).requiresCorrectToolForDrops(),
